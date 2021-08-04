@@ -1,9 +1,19 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import GameList from './pages/GameList';
+import GameDetails from './components/game/GameDetails';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello wordl</h1>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={GameList} />
+          <Route path='/:id' component={GameDetails} />
+        </Switch>
+      </Router>
+
+
     </div>
   );
 }

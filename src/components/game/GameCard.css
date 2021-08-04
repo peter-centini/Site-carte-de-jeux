@@ -1,0 +1,32 @@
+/* .game-picture{
+    width: 400px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+} */
+.btn{
+    margin: auto;
+    margin-top: 10px;
+    background-color: brown;
+    font-size: large;
+}
+h2{
+    text-align: center;
+
+}
+
+.GameCard{
+    display: flex;
+    flex-direction: column;
+}
+
+.game-picture{
+   display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    height: 40vw;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+   }
