@@ -14,16 +14,11 @@ function GameList() {
         .get('https://apis.wilders.dev/wild-games/games/')
         .then((res) => res.data)
         .then ((data) => setGames(data))
-        //console.log(setGames)
-        
      }, [])
 
     const handelDelete = (id) =>{
         setGames(games.filter(game => game.id !== id))
     }
-    // const handelrating = (rating) =>{
-    //     setrating (games.filter(game => game.rating !== rating))
-    // }
         
     return (
         
@@ -31,11 +26,7 @@ function GameList() {
                 <button className="filter-bnt" onClick={() => setRating(!rating)}>
                 {rating ? 'Note < 4': 'Note > 4'}
             </button>
-            {/* {games.map((game) => (
-                <div key={game.id}>
-                    <Game game={game} deleteGame = {handleDelete} />
-                </div>
-            ))} */}
+            
             <div>
             {!rating ? games.map((game) => ( <div key={game.id}> 
             <Game game={game} handelDelete={handelDelete}/>
