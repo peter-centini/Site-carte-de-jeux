@@ -6,6 +6,7 @@ import {useState, useEffect} from 'react';
 function GameList() {
 
     const [games, setGames] = useState([]);
+    const {rating, setrating} = useState(false)
     
     useEffect(() => {
         axios
@@ -19,16 +20,32 @@ function GameList() {
     const handleDelete = (id) =>{
         setGames(games.filter(game => game.id !== id))
     }
+    // const rating = (rating) =>{
+    //     setrating (games.filter(game => game.rating !== rating))
+    // }
         
     return (
         <div className="GameList">
             {games.map((game) => (
-               <div key={game.id} >
-                   <Game game={game} deleteGame={handleDelete} />
-                   </div>))}
-            
+                <div key={game.id}>
+                    <Game game={game} deleteGame = {handleDelete} />
+                </div>
+            ))}
+            <button className="filter-bnt" onclick={() => setrating(!rating)}>
+                {rating ? 'toute les notes': 'note sup a 4'}
+            </button>
+            <div>{!rating ? games.map((game) => ( <div key={game.id}> <Game game={game}/>
+                </div>
+            ))
+            : games.filter((game) => game.rating > 4.2).map((game) => (
+            <div key={game.id}>
+                <Game game={game}/>
+                </div>
+            ))}
+            </div>
         </div>
-    )
+     ) 
+    
 };
 
 export default GameList
