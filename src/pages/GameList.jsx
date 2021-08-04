@@ -29,7 +29,7 @@ function GameList() {
         
         <div className="GameList">
                 <button className="filter-bnt" onClick={() => setRating(!rating)}>
-                {rating ? 'toute les notes': 'note sup a 4'}
+                {rating ? 'Note < 4': 'Note > 4'}
             </button>
             {/* {games.map((game) => (
                 <div key={game.id}>
