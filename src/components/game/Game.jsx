@@ -5,15 +5,17 @@ import {Link} from 'react-router-dom';
 
 function Game({game, handelDelete}) {
     return (
-        <div className="GameCard">
+        <div className="GameCard" id="container">
             <Link to= {{pathname: `/${game.id}`}}>
                 <h2> {game.name} </h2>
+                 <span> {game.rating} </span>
             </Link>
-            <span> {game.rating} </span>
             <img className="game-picture" src={game.background_image} alt={game.name} />
+            <div className="btn-d">
              <button className="btn" onClick={() => handelDelete(game.id)}>
             Delete Game
-            </button>     
+            </button>   
+            </div>  
         </div>            
     )
 };

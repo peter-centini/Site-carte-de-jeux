@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import Game from '../components/game/Game';
+import '../components/game/Game.css';
 import {useState, useEffect} from 'react';
-import './GameList.css'
+import './GameList.css';
 
 function GameList() {
 
@@ -21,13 +22,12 @@ function GameList() {
     }
         
     return (
-        
-        <div className="GameList">
+        <div className="container">
                 <button className="filter-bnt" onClick={() => setRating(!rating)}>
                 {rating ? 'Note < 4': 'Note > 4'}
             </button>
-            
-            <div>
+        <div className="GameList">
+            <div className="gamebox">
             {!rating ? games.map((game) => ( <div key={game.id}> 
             <Game game={game} handelDelete={handelDelete}/>
                 </div>
@@ -37,8 +37,9 @@ function GameList() {
                 <Game game={game} handelDelete={handelDelete}/>
                 </div>
             ))}
-            </div>
-        </div>
+                </div>
+              </div>
+         </div>
      ) 
     
 };
