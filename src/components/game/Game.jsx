@@ -3,7 +3,7 @@ import './Game.css';
 import {Link} from 'react-router-dom';
 
 
-function Game({game, deleteGame}) {
+function Game({game, handelDelete}) {
     return (
         <div className="GameCard">
             <Link to= {{pathname: `/${game.id}`}}>
@@ -11,7 +11,7 @@ function Game({game, deleteGame}) {
             </Link>
             <span> {game.rating} </span>
             <img className="game-picture" src={game.background_image} alt={game.name} />
-             <button className="btn" onClick={() => deleteGame(game.id)}>
+             <button className="btn" onClick={() => handelDelete(game.id)}>
             Delete Game
             </button>     
         </div>            

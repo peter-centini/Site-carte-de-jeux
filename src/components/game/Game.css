@@ -15,9 +15,10 @@ h2{
     text-align: center;
 }
 span{
-    visibility: hidden;
-    text-align: center;
+    text-align-last: center;
+    text-transform: uppercase;
 }
+
 .GameCard{
     display: flex;
     flex-direction: column;
