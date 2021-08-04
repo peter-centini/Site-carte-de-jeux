@@ -27,7 +27,6 @@ span{
 .game-picture{
    display: inline-flex;
    align-items: stretch;
-
     flex-direction: row;
     width: 120px;
     height:120px;
