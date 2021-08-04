@@ -1,7 +1,7 @@
-import React from 'react'
-import {useEffect, useState} from 'react'
-import axios from 'axios'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {useEffect, useState} from 'react';
+import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 
 function GameDetails(props) {
@@ -21,10 +21,10 @@ function GameDetails(props) {
         <div className="GameDatails">
             <span> Clip Videos :</span>
             <video control src={trailer}/>
-            <link to={{pathname: '/'}}>Retour vers l'acceuil</link>
+            <Link to={{pathname: '/'}}>Retour vers l'acceuil</Link>
             
         </div>
     )
-}
+};
 
 export default GameDetails

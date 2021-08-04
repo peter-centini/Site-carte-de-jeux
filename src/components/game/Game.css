@@ -13,9 +13,11 @@
 }
 h2{
     text-align: center;
-
 }
-
+span{
+    visibility: hidden;
+    text-align: center;
+}
 .GameCard{
     display: flex;
     flex-direction: column;

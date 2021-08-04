@@ -1,9 +1,9 @@
-import React from 'react'
-import './GameCard.css'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import './Game.css';
+import {Link} from 'react-router-dom';
 
 
-function GameCard({game, deleteGame}) {
+function Game({game, deleteGame}) {
     return (
         <div className="GameCard">
             <Link to= {{pathname: `/${game.id}`}}>
@@ -16,6 +16,6 @@ function GameCard({game, deleteGame}) {
             </button>     
         </div>            
     )
-}
+};
 
-export default GameCard
+export default Game

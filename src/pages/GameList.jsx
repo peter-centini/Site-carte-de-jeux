@@ -1,7 +1,7 @@
-import React from 'react'
-import axios from 'axios'
-import GameCard from '../components/game/GameCard'
-import {useState, useEffect} from 'react'
+import React from 'react';
+import axios from 'axios';
+import Game from '../components/game/Game';
+import {useState, useEffect} from 'react';
 
 function GameList() {
 
@@ -24,11 +24,11 @@ function GameList() {
         <div className="GameList">
             {games.map((game) => (
                <div key={game.id} >
-                   <GameCard game={game} deleteGame={handleDelete} />
+                   <Game game={game} deleteGame={handleDelete} />
                    </div>))}
             
         </div>
     )
-}
+};
 
 export default GameList
