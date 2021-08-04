@@ -20,7 +20,7 @@ function GameDetails(props) {
     return (
         <div className="GameDatails">
             <span> Clip Videos :</span>
-            <video control src={traiter}/>
+            <video control src={trailer}/>
             <link to={{pathname: '/'}}>Retour vers l'acceuil</link>
             
         </div>
